@@ -133,11 +133,10 @@ class ListAlbumsActivity: AppCompatActivity() {
             txtViewDateListened.text = "Last Listen: ${formatDate(album.date)}"
 
             val textViewRating : TextView = itemView.findViewById(R.id.textViewRating)
-            if (album.avgRate != null) {
-                textViewRating.text = album.avgRate.toString()
+            textViewRating.text = album.avgRate?.toString() ?: "x"
+            setStarRating(album.avgRate ?: 0, itemView)
 
-                setStarRating(album.avgRate!!, itemView)
-            }
+
 
             /*itemView.setOnClickListener{
                 val intent = Intent(this@ListAlbumsActivity, ListSongActivity::class.java)

@@ -6,6 +6,7 @@ Welcome to Spotify Tracker! This project aims to create an application that serv
 - [Description](#description)
 - [Features](#features)
 - [Download and Test the App](#download-and-test-the-app)
+- [Setup Firebase Database](#setup-firebase-database)
 - [Environment Variables](#environment-variables)
 - [Setup Environment Variables](#setup-environment-variables)
 - [Running the Application](#running-the-application)
@@ -31,6 +32,15 @@ You can download this version of the app to test on your Android device. Follow 
 
 Please note that this version is provided for testing purposes, and you may want to build the app locally for the latest changes and features. To build the app on your own, follow the information below.
 
+## Setup Firebase Database
+To use this application, you need to set up a Firebase database. Follow these steps:
+1. Visit the [Firebase Console](https://console.firebase.google.com/).
+2. Create a new project or select an existing one.
+3. Navigate to the database section and create a new database.
+4. To set up your database just follow the instructions in the [Firebase Documentation](https://firebase.google.com/docs/database).
+
+Once your database is set up, you can configure the necessary environment variables in the `env` file as mentioned in the sections below.
+
 ## Environment Variables
 - **SPOTIFY_CLIENT_ID:**
   - Description: The client ID for Spotify integration. This variable should contain the unique identifier assigned to your Spotify application.
@@ -42,7 +52,7 @@ Please note that this version is provided for testing purposes, and you may want
 ## Setup Environment Variables
 To run SpotApp, you need to set up the required environment variables. Follow the steps below:
 1. **Create an `env` file:**
-   - Navigate to the `assets` directory inside `spotApp/app/src/main/assets`.
+   - Navigate to the `assets` directory inside `app/src/main/assets`.
    - Create a file named `env`.
 2. **Add Environment Variables:**
    - Open the `env` file you just created.
